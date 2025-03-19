@@ -3,7 +3,7 @@
 namespace EdemotsCourses\EsgiDesignPattern\Exercice1;
 
 Interface Vehicle {
-    public function accelerate();
+    public function accelerate(): float;
 
-    public function brakes();
+    public function brakes(): float;
 }

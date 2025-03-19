@@ -8,17 +8,18 @@ class Car implements Vehicle
 {
     public float $speed = 0.0;
 
-    public function accelerate()
+    public function accelerate(): float
     {
-        return $this->speed = $this->speed + 3.5;
+        $this->speed += 3.5;
+        return $this->speed;
     }
 
-    public function brakes()
+    public function brakes(): float
     {
-        if ($this->speed >= 5.0) {
-            $this->speed = $this->speed - 5.0;
-        } else {
+        $this->speed -= 5.0;
+        if ($this->speed < 0) {
             $this->speed = 0;
         }
+        return $this->speed;
     }
 }
